@@ -12,7 +12,7 @@ if __name__ == '__main__':
     model.load_state_dict(load("unet.pth"))
     model.eval()
     transform = transforms.Compose([
-        transforms.Resize((128, 128)),
+        transforms.Resize((400, 400)),
         transforms.ToTensor(),
     ])
     dataset_internal = EvaluationDataset("data/imagesTs-Internal", transform=transform)

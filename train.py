@@ -1,13 +1,13 @@
-from model import UNet
-from data import TrainingDataset
-from torchvision import transforms
-from torch.utils.data import DataLoader
 from torch import device, cuda, nn, optim, save
+from torch.utils.data import DataLoader
+from torchvision import transforms
 
+from data import TrainingDataset
+from model import UNet
 
 if __name__ == '__main__':
     transform = transforms.Compose([
-        transforms.Resize((128, 128)),
+        transforms.Resize((400, 400)),
         transforms.ToTensor(),
     ])
     loader = DataLoader(TrainingDataset("data/imagesTr", "data/labelsTr", transform), batch_size=8, shuffle=True)
