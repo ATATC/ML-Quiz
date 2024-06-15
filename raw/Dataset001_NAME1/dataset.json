@@ -1,0 +1,14 @@
+{
+  "channel_names": {
+    "0": "red",
+    "1": "green",
+    "2": "blue"
+  },
+  "labels": {
+    "background": 0,
+    "cytoplasm": 1,
+    "nucleus": 2
+  },
+  "numTraining": 231,
+  "file_ending": ".png"
+}

@@ -5,4 +5,7 @@ build
 *.egg-info
 dist
 data
+preprocessed
+raw
+weights
 unet.pth
