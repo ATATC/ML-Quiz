@@ -4,7 +4,6 @@ main.py
 build
 *.egg-info
 dist
-data
 preprocessed
 raw
 weights
