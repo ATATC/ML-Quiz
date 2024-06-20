@@ -33,5 +33,5 @@ def print_validation(a: float, b: float, c: float, d: float, e: float, f: float)
 
 
 if __name__ == '__main__':
-    print(print_validation(*crossvalidate("results-Internal", "results-Internal-SwinUnet", 77)))
-    print(print_validation(*crossvalidate("results-External", "results-External-SwinUnet", 60)))
+    print(print_validation(*crossvalidate("seg-Internal-UNet", "seg-Internal-Trans", 77)))
+    print(print_validation(*crossvalidate("seg-External-UNet", "seg-External-Trans", 60)))
