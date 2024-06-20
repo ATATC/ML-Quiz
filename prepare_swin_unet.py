@@ -33,3 +33,23 @@ if __name__ == '__main__':
         label_image = label_image.resize((224, 224))
         label_image = remove_alpha_channel(label_image)
         label_image.save(f"raw/Dataset001_NAME1/labelsTr/case_{n}.png", "PNG")
+
+    for i in range(53):
+        tiff_image = Image.open(f"data/imagesTs-Internal/Internal_img_{(n := str(i).zfill(3))}.tiff")
+        tiff_image = remove_alpha_channel(tiff_image)
+        tiff_image.save(f"imagesTs-Internal/case_{n}_0000.png", "PNG")
+
+    for i in range(53, 77):
+        jpg_image = Image.open(f"data/imagesTs-Internal/Internal_img_{(n := str(i).zfill(3))}.jpg")
+        jpg_image = remove_alpha_channel(jpg_image)
+        jpg_image.save(f"imagesTs-Internal/case_{n}_0000.png", "PNG")
+
+    for i in range(32):
+        tiff_image = Image.open(f"data/imagesTs-External/External_img_{(n := str(i).zfill(3))}.tiff")
+        tiff_image = remove_alpha_channel(tiff_image)
+        tiff_image.save(f"imagesTs-External/case_{n}_0000.png", "PNG")
+
+    for i in range(32, 60):
+        jpg_image = Image.open(f"data/imagesTs-External/External_img_{(n := str(i).zfill(3))}.jpg")
+        jpg_image = remove_alpha_channel(jpg_image)
+        jpg_image.save(f"imagesTs-External/case_{n}_0000.png", "PNG")
